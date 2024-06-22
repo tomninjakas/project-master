@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 class SightsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Sights
-        fields = ['id', 'title', 'code', 'linenos', 'language', 'style', 'owner']
+        fields = "__all__"
 
 
 class UserSerializer(serializers.ModelSerializer):

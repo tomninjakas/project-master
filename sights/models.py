@@ -12,7 +12,7 @@ class Sights(models.Model):
     Information = models.TextField()
     City = models.CharField(choices=CITY_CHOICES, default='kastoria', max_length=100)
     Category = models.CharField(choices=CATEGORY_CHOICES, default='nature', max_length=100)
-    owner = models.ForeignKey('auth.User', related_name='snippets', on_delete=models.CASCADE, null=True)
+    owner = models.ForeignKey('auth.User', related_name='sights', on_delete=models.CASCADE, null=True)
 
     class Meta:
         ordering = ['created']
