@@ -23,7 +23,7 @@ class SightsList(generics.ListCreateAPIView):
     queryset = Sights.objects.all()
     serializer_class = SightsSerializer
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter,]
-    search_fields = ['title', 'code']
+    search_fields = ['title', 'description']
     ordering_fields = ('title', 'owner')
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
